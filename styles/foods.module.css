@@ -1,0 +1,34 @@
+.foods_container {
+  box-sizing: border-box;
+  overflow: hidden;
+  padding: 20px 10px;
+}
+.foods_content {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-row-gap: 10px;
+  grid-column-gap: 10px;
+}
+.foods_item {
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border: 1px solid gainsboro;
+  cursor: pointer;
+}
+
+.food_item_name {
+  font-family: Helvetica, sans-serif;
+  margin-bottom: 5px;
+}
+
+@media (max-width: 640px) {
+  .foods_content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 10px;
+    grid-column-gap: 10px;
+  }
+}
