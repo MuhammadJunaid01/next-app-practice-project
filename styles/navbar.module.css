@@ -1,8 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap");
+
 .container {
   padding: 10px 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+.search_bar {
+  position: relative;
+  width: 30%;
+}
+.input {
+  width: 100%;
+  position: relative;
+  padding: 12px 20px;
+  border: none;
+  outline: none;
+  background-color: #f4f4f4;
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+  position: relative;
+}
+
+.btn {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 700;
+}
+.btn:hover {
+  color: #a8b324;
 }
 .call_us {
   display: flex;
@@ -12,9 +46,18 @@
 }
 .call_us_icon > p {
   color: #a8b324;
-  font-family: freshio-icon;
-  font-size: 37px !important;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
+  font-size: 50px !important;
   line-height: 37px;
+}
+.call_us {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
+  font-size: 14px !important;
+  line-height: 20px;
+  color: #000000;
+  margin-left: 2px;
 }
 .cart_compare_person {
   display: flex;
@@ -24,8 +67,8 @@
 }
 .icon {
   cursor: pointer;
-  height: 45px;
-  width: 45px;
+  height: 40px;
+  width: 40px;
   border-radius: 50%;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
@@ -34,8 +77,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  color: gray;
 }
 .icon:hover {
   background-color: #a8b324 !important;
-  color: white;
+  color: white !important;
 }

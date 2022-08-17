@@ -9,13 +9,10 @@ import PersonIcon from "@mui/icons-material/Person";
 const NavBar = () => {
   return (
     <div className={NavbarStyle.container}>
-      <Image src={Logo} width={100} height={60} priority></Image>
-      <div>
+      <Image src={Logo} width={110} height={60} priority></Image>
+      <div className={NavbarStyle.search_bar}>
         <input className={NavbarStyle.input} type="text" />
         <button className={NavbarStyle.btn}>Search</button>
-        <p>
-          <SearchIcon />
-        </p>
       </div>
       <div className={NavbarStyle.call_us}>
         <div className={NavbarStyle.call_us_icon}>
@@ -24,31 +21,19 @@ const NavBar = () => {
           </p>
         </div>
         <div>
-          <p
-            style={{
-              marginLeft: "4px",
-              fontSize: "12px",
-              lineHeight: "22px",
-              fontFamily:
-                "'mazzard soft h', helveticaneue-light, 'helvetica neue light', 'helvetica neue', Helvetica, Arial, 'lucida grande', sans-serif",
-              fontWeight: "700",
-              color: "#000000",
-            }}
-          >
-            CALL US 24 / 7
-          </p>
+          <p className={NavbarStyle.call_us}>CALL US 24 / 7</p>
           <p>(+880)1634900664</p>
         </div>
       </div>
       <div className={NavbarStyle.cart_compare_person}>
         <p style={{ backgroundColor: "#B0E0E6" }} className={NavbarStyle.icon}>
-          <PersonIcon style={{}} />
+          <PersonIcon style={{ fontSize: "14px" }} />
         </p>
         <p style={{ backgroundColor: "#FAEBD7	" }} className={NavbarStyle.icon}>
-          <FavoriteIcon style={{}} />
+          <FavoriteIcon style={{ fontSize: "14px" }} />
         </p>
         <p style={{ backgroundColor: "#FFE4E1		" }} className={NavbarStyle.icon}>
-          <ShoppingBasketIcon style={{}} />
+          <ShoppingBasketIcon style={{ fontSize: "14px" }} />
         </p>
       </div>
     </div>

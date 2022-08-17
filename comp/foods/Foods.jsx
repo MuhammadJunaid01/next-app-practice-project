@@ -8,9 +8,9 @@ import RemoveRedEyeIcon from "@mui/icons-material/RemoveRedEye";
 import SyncAltIcon from "@mui/icons-material/SyncAlt";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import KeyboardDoubleArrowRightIcon from "@mui/icons-material/KeyboardDoubleArrowRight";
+import Button from "../button";
 
 const Foods = ({ data }) => {
-  console.log("data", data);
   const router = useRouter();
   const handleLink = (id) => {
     console.log("id", id);
@@ -30,16 +30,20 @@ const Foods = ({ data }) => {
         >
           {data.map((data, index) => {
             return (
-              <Carousel.Item>
-                <div
-                  onClick={() => handleLink(index)}
-                  className={FooodsStyle.foods_item}
-                  key={index}
-                >
-                  <div>
-                    <img className={FooodsStyle.img} src={data.img} alt="img" />
-                  </div>
-                  <Link href={`foods/${data.id}`}>
+              <Carousel.Item key={index}>
+                <Link href={`foods/${data.id}`}>
+                  <div
+                    onClick={() => handleLink(index)}
+                    className={FooodsStyle.foods_item}
+                  >
+                    <div>
+                      <img
+                        className={FooodsStyle.img}
+                        src={data.img}
+                        alt="img"
+                      />
+                    </div>
+
                     <a href="">
                       <div style={{ padding: "20px" }}>
                         <p className={FooodsStyle.food_item_name}>
@@ -47,22 +51,25 @@ const Foods = ({ data }) => {
                         </p>
                       </div>
                     </a>
-                  </Link>
-                  <div className={FooodsStyle.hover_icon}>
-                    <p>
-                      <RemoveRedEyeIcon />
-                    </p>
-                    <p>
-                      <SyncAltIcon />
-                    </p>
-                    <p>
-                      <FavoriteIcon />
-                    </p>
+
+                    <div className={FooodsStyle.hover_icon}>
+                      <p>
+                        <RemoveRedEyeIcon />
+                      </p>
+                      <p>
+                        <SyncAltIcon />
+                      </p>
+                      <p>
+                        <FavoriteIcon />
+                      </p>
+                    </div>
+                    <Button
+                      text={"Add To Cart"}
+                      Icon={KeyboardDoubleArrowRightIcon}
+                      sidebar={false}
+                    />
                   </div>
-                  <button className={FooodsStyle.add_cart_btn}>
-                    Add To Cart
-                  </button>
-                </div>
+                </Link>
               </Carousel.Item>
             );
           })}

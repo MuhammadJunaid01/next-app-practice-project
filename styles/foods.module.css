@@ -101,9 +101,7 @@
   background-color: transparent;
   cursor: pointer;
   position: relative;
-}
-.add_cart_btn::after {
-  position: absolute;
-  content: ">>";
-  right: -20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
