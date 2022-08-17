@@ -2,33 +2,108 @@
   box-sizing: border-box;
   overflow: hidden;
   padding: 20px 10px;
-}
-.foods_content {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-row-gap: 10px;
-  grid-column-gap: 10px;
+  width: 100%;
+  position: relative;
+  box-sizing: border-box;
+  height: 90vh;
 }
 .foods_item {
-  border-radius: 5px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
-  border: 1px solid gainsboro;
   cursor: pointer;
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+  text-align: center;
+}
+.foods_item::before {
+  content: "";
+  position: absolute;
+  bottom: 33px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 1px;
+  width: 50px;
+  background-color: gray;
+  transition: all 500ms ease-in-out;
+  -webkit-transition: all 500ms ease-in-out;
+  -moz-transition: all 500ms ease-in-out;
+  -ms-transition: all 500ms ease-in-out;
+  -o-transition: all 500ms ease-in-out;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
 }
 
-.food_item_name {
-  font-family: Helvetica, sans-serif;
-  margin-bottom: 5px;
+.foods_item:hover::before {
+  width: 80px;
 }
 
-@media (max-width: 640px) {
-  .foods_content {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-row-gap: 10px;
-    grid-column-gap: 10px;
-  }
+.img {
+  width: 100%;
+  height: auto;
+}
+.hover_icon {
+  position: absolute;
+  width: 100%;
+  bottom: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  box-sizing: border-box;
+  /*margin-left: 20px;
+  */
+  transition: transform 900ms ease-in-out;
+  -webkit-transition: transform 900ms ease-in-out;
+  -moz-transition: transform 900ms ease-in-out;
+  -ms-transition: transform 900ms ease-in-out;
+  -o-transition: transform 900ms ease-in-out;
+  transform-origin: bottom;
+  transform: scaleY(0);
+  -webkit-transform: scaleY(0);
+  -moz-transform: scaleY(0);
+  -ms-transform: scaleY(0);
+  -o-transform: scaleY(0);
+}
+.hover_icon > p {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  background-color: white;
+  color: gray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid gainsboro;
+}
+.hover_icon > p:hover {
+  background-color: #a8b324;
+  color: white;
+}
+.foods_item:hover .hover_icon {
+  transform: scaleY(1);
+  -webkit-transform: scaleY(1);
+  -moz-transform: scaleY(1);
+  -ms-transform: scaleY(1);
+  -o-transform: scaleY(1);
+}
+.add_cart_btn {
+  border: none;
+  font-family: "mazzard soft h", helveticaneue-light, "helvetica neue light",
+    "helvetica neue", Helvetica, Arial, "lucida grande", sans-serif;
+  font-weight: 700;
+  line-height: 22px;
+  font-size: 12px;
+  background-color: transparent;
+  cursor: pointer;
+  position: relative;
+}
+.add_cart_btn::after {
+  position: absolute;
+  content: ">>";
+  right: -20px;
 }

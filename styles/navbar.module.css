@@ -1,0 +1,41 @@
+.container {
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.call_us {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+.call_us_icon > p {
+  color: #a8b324;
+  font-family: freshio-icon;
+  font-size: 37px !important;
+  line-height: 37px;
+}
+.cart_compare_person {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+.icon {
+  cursor: pointer;
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.icon:hover {
+  background-color: #a8b324 !important;
+  color: white;
+}
