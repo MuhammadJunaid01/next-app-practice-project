@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&display=swap");
+.container {
+  background-color: #0a472e;
+  color: white;
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 12px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.department_container {
+  position: relative;
+}
+.department {
+  width: 130%;
+  padding: 10px 5px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+
+  gap: 5px;
+  background-color: #7f881b;
+  box-sizing: border-box;
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+  font-family: "Inter", sans-serif;
+  cursor: pointer;
+  position: relative;
+}
+.department_menu {
+  position: absolute;
+  background-color: #ffffff;
+  top: 50px;
+  width: 100%;
+  padding: 10px;
+  z-index: 333;
+  color: black;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  visibility: hidden;
+  height: 200px;
+  transition: all 900ms ease-in-out;
+  -webkit-transition: all 900ms ease-in-out;
+  -moz-transition: all 900ms ease-in-out;
+  -ms-transition: all 900ms ease-in-out;
+  -o-transition: all 900ms ease-in-out;
+  font-family: "Roboto Mono", monospace;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 25px;
+}
+.department:hover .department_menu {
+  visibility: visible;
+}
+.sub_menu_container {
+  position: relative;
+}
+.sub_menu {
+  position: absolute;
+  /*left: 90px;
+  */
+  right: -190px;
+  width: 200px;
+  background-color: #ffffff;
+  display: block;
+  padding-left: 20px;
+  line-height: 24px;
+  transition: all 500ms ease-in-out;
+  -webkit-transition: all 500ms ease-in-out;
+  -moz-transition: all 500ms ease-in-out;
+  -ms-transition: all 500ms ease-in-out;
+  -o-transition: all 500ms ease-in-out;
+  visibility: hidden;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+.sub_menu_container:hover .sub_menu {
+  visibility: visible;
+}

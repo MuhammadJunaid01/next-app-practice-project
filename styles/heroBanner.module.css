@@ -1,0 +1,11 @@
+.container {
+  height: 80vh;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+  background-image: url("https://i.ibb.co/qmNxh9c/tim-mossholder-x-Dw-Ea2kae-JA-unsplash.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}

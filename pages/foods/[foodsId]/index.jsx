@@ -5,6 +5,7 @@ const SingelFoods = ({ data }) => {
   return (
     <div>
       <h1>hello</h1>
+      <img src={data.img} alt="" />
     </div>
   );
 };

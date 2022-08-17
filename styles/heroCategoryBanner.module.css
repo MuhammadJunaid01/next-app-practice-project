@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap");
+.container {
+  padding: 10px 17px;
+  overflow: hidden;
+}
+.banner_1 {
+  height: 300px;
+  width: 90%;
+  background-image: url("https://i.ibb.co/82LCZ2M/h1-banner-1.jpg");
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-sizing: border-box;
+  overflow: hidden;
+  cursor: pointer;
+}
+.banner_1:hover {
+  transform: scale(1);
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+}
+.banner_2 {
+  height: 300px;
+  width: 90%;
+  background-image: url("https://i.ibb.co/qkxhBR1/h1-banner-2.jpg");
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-sizing: border-box;
+  overflow: hidden;
+  cursor: pointer;
+}
+.banner_3 {
+  height: 300px;
+  width: 90%;
+  background-image: url("https://i.ibb.co/VN10Z9T/h1-banner-3.jpg");
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-sizing: border-box;
+  overflow: hidden;
+  cursor: pointer;
+}
+.conent {
+  margin-left: 40px;
+  margin-top: 55px;
+}
+.conent > p {
+  font-family: "Ubuntu", sans-serif;
+  line-height: 29px;
+  font-weight: 400;
+  font-size: 20px;
+  /* color: #0a472e; */
+}
+.btn {
+  margin-top: 40px;
+  position: relative;
+}
+.btn::after {
+  content: "";
+  position: absolute;
+  left: 10px;
+  bottom: 3px;
+  height: 1px;
+  width: 55px;
+  background-color: black;
+}

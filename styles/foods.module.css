@@ -14,6 +14,7 @@
   box-sizing: border-box;
   overflow: hidden;
   text-align: center;
+  text-align: center;
 }
 .foods_item::before {
   content: "";
@@ -90,18 +91,4 @@
   -moz-transform: scaleY(1);
   -ms-transform: scaleY(1);
   -o-transform: scaleY(1);
-}
-.add_cart_btn {
-  border: none;
-  font-family: "mazzard soft h", helveticaneue-light, "helvetica neue light",
-    "helvetica neue", Helvetica, Arial, "lucida grande", sans-serif;
-  font-weight: 700;
-  line-height: 22px;
-  font-size: 12px;
-  background-color: transparent;
-  cursor: pointer;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }

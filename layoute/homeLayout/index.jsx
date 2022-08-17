@@ -3,13 +3,25 @@ import Button from "../../comp/button";
 import layoutImage from "../../public/homeLayoutImage.jpg";
 import HomeLayoutStyles from "../../styles/homelay.module.css";
 import KeyboardDoubleArrowRightIcon from "@mui/icons-material/KeyboardDoubleArrowRight";
+import HeroBanner from "../../comp/heroBanner";
+import HeroCategoryBanner from "../../comp/heroCategoryBanner/HeroCategoryBanner";
 
 const HomeLayout = ({ children }) => {
   return (
-    <div style={{ paddingLeft: "20px" }}>
+    <div>
       <Grid container>
+        <Grid item xs={12} md={12}>
+          <HeroBanner />
+        </Grid>
+        <Grid item xs={12} md={12}>
+          <HeroCategoryBanner />
+        </Grid>
+
         <Grid item xs={12} md={3}>
-          <div className={HomeLayoutStyles.side_banner_container}>
+          <div
+            style={{ paddingLeft: "20px", marginTop: "18px" }}
+            className={HomeLayoutStyles.side_banner_container}
+          >
             <div className={HomeLayoutStyles.side_banner}>
               <div className={HomeLayoutStyles.side_banner_content}>
                 <p className={HomeLayoutStyles.side_banner_content_summer_sale}>

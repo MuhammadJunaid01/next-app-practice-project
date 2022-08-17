@@ -12,6 +12,13 @@
   align-items: center;
   justify-content: center;
 }
+.btn:hover .icon {
+  transform: translateX(60%);
+  -webkit-transform: translateX(60%);
+  -moz-transform: translateX(60%);
+  -ms-transform: translateX(60%);
+  -o-transform: translateX(60%);
+}
 .sidebar_btn {
   border: none;
   font-family: "mazzard soft h", helveticaneue-light, "helvetica neue light",

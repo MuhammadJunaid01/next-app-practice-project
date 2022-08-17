@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
 import FooodsStyle from "../../styles/foods.module.css";
-import { AiOutlineArrowRight } from "react-icons/ai";
 import { Grid } from "@mui/material";
 import Carousel from "better-react-carousel";
 import RemoveRedEyeIcon from "@mui/icons-material/RemoveRedEye";
@@ -31,11 +30,11 @@ const Foods = ({ data }) => {
           {data.map((data, index) => {
             return (
               <Carousel.Item key={index}>
-                <Link href={`foods/${data.id}`}>
-                  <div
-                    onClick={() => handleLink(index)}
-                    className={FooodsStyle.foods_item}
-                  >
+                <div
+                  onClick={() => handleLink(index)}
+                  className={FooodsStyle.foods_item}
+                >
+                  <Link href={`foods/${data.id}`}>
                     <div>
                       <img
                         className={FooodsStyle.img}
@@ -43,33 +42,39 @@ const Foods = ({ data }) => {
                         alt="img"
                       />
                     </div>
+                  </Link>
 
-                    <a href="">
-                      <div style={{ padding: "20px" }}>
-                        <p className={FooodsStyle.food_item_name}>
-                          {data.title}
-                        </p>
-                      </div>
-                    </a>
-
-                    <div className={FooodsStyle.hover_icon}>
-                      <p>
-                        <RemoveRedEyeIcon />
-                      </p>
-                      <p>
-                        <SyncAltIcon />
-                      </p>
-                      <p>
-                        <FavoriteIcon />
-                      </p>
+                  <a href="">
+                    <div style={{ padding: "20px" }}>
+                      <p className={FooodsStyle.food_item_name}>{data.title}</p>
                     </div>
+                  </a>
+
+                  <div className={FooodsStyle.hover_icon}>
+                    <p>
+                      <RemoveRedEyeIcon />
+                    </p>
+                    <p>
+                      <SyncAltIcon />
+                    </p>
+                    <p>
+                      <FavoriteIcon />
+                    </p>
+                  </div>
+                  <div
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                    }}
+                  >
                     <Button
                       text={"Add To Cart"}
                       Icon={KeyboardDoubleArrowRightIcon}
                       sidebar={false}
                     />
                   </div>
-                </Link>
+                </div>
               </Carousel.Item>
             );
           })}
