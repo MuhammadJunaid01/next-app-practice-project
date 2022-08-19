@@ -11,6 +11,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: transform 900ms ease-in-out;
+  -webkit-transition: transform 900ms ease-in-out;
+  -moz-transition: transform 900ms ease-in-out;
+  -ms-transition: transform 900ms ease-in-out;
+  -o-transition: transform 900ms ease-in-out;
 }
 .btn:hover .icon {
   transform: translateX(60%);
@@ -39,6 +44,11 @@
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
+  transition: transform 900ms ease-in-out;
+  -webkit-transition: transform 900ms ease-in-out;
+  -moz-transition: transform 900ms ease-in-out;
+  -ms-transition: transform 900ms ease-in-out;
+  -o-transition: transform 900ms ease-in-out;
 }
 .icon {
   font-size: 14px;

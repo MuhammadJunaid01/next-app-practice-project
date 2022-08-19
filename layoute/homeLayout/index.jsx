@@ -1,12 +1,13 @@
 import { Grid } from "@mui/material";
 import Button from "../../comp/button";
-import layoutImage from "../../public/homeLayoutImage.jpg";
 import HomeLayoutStyles from "../../styles/homelay.module.css";
 import KeyboardDoubleArrowRightIcon from "@mui/icons-material/KeyboardDoubleArrowRight";
 import HeroBanner from "../../comp/heroBanner";
 import HeroCategoryBanner from "../../comp/heroCategoryBanner/HeroCategoryBanner";
+import ShopSalesMenu from "../../comp/shopSalesMenu/ShopSalesMenu";
+import TopRatedProducts from "../../comp/topRated/TopRatedProducts";
 
-const HomeLayout = ({ children }) => {
+const HomeLayout = ({ children, data }) => {
   return (
     <div>
       <Grid container>
@@ -16,7 +17,9 @@ const HomeLayout = ({ children }) => {
         <Grid item xs={12} md={12}>
           <HeroCategoryBanner />
         </Grid>
-
+        <Grid item xs={12} md={12}>
+          <ShopSalesMenu text={"Shop New"} />
+        </Grid>
         <Grid item xs={12} md={3}>
           <div
             style={{ paddingLeft: "20px", marginTop: "18px" }}
@@ -47,6 +50,9 @@ const HomeLayout = ({ children }) => {
         </Grid>
         <Grid item xs={12} md={9}>
           {children}
+        </Grid>
+        <Grid item xs={12} md={12}>
+          <TopRatedProducts data={data} />
         </Grid>
       </Grid>
     </div>

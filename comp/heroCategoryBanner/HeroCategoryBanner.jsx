@@ -6,7 +6,7 @@ import Button from "../button";
 const HeroCategoryBanner = () => {
   return (
     <div className={HeroCategoryStyles.container}>
-      <Grid container>
+      <Grid container spacing={3}>
         <Grid item xs={12} md={4}>
           <div className={HeroCategoryStyles.banner_1}>
             <div className={HeroCategoryStyles.conent}>

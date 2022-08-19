@@ -7,7 +7,14 @@ import ShoppingBasketIcon from "@mui/icons-material/ShoppingBasket";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import PersonIcon from "@mui/icons-material/Person";
 import TopBar from "../menubar/Index";
+import { useDispatch } from "react-redux";
+import { increment } from "../../redux/reduicers/increment/index.js";
 const NavBar = () => {
+  const dispatch = useDispatch();
+
+  const handleInc = () => {
+    dispatch(increment(2));
+  };
   return (
     <div>
       <div className={NavbarStyle.container}>
@@ -16,6 +23,7 @@ const NavBar = () => {
           <input className={NavbarStyle.input} type="text" />
           <button className={NavbarStyle.btn}>Search</button>
         </div>
+        <button onClick={handleInc}>Inceremnt</button>
         <div className={NavbarStyle.call_us}>
           <div className={NavbarStyle.call_us_icon}>
             <p>

@@ -1,7 +1,6 @@
 import MenuBarStyles from "../../styles/menubar.module.css";
 import DehazeIcon from "@mui/icons-material/Dehaze";
 import KeyboardDoubleArrowRightIcon from "@mui/icons-material/KeyboardDoubleArrowRight";
-import { departmentMenu } from "../../data";
 import { useState } from "react";
 const TopBar = () => {
   const [subMenu, setSubMenu] = useState([]);

@@ -1,0 +1,47 @@
+.container {
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+  padding: 10px 17px;
+}
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid gainsboro;
+  position: relative;
+}
+.content::after {
+  position: absolute;
+  content: "";
+  top: 20px;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border: 3px solid #bac34e;
+}
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  padding-right: 20px;
+  border-right: 1px solid rgba(128, 128, 128, 0.459);
+}
+.menu > p {
+  cursor: pointer;
+  font-family: "mazzard soft h", helveticaneue-light, "helvetica neue light",
+    "helvetica neue", Helvetica, Arial, "lucida grande", sans-serif;
+  font-size: 12px;
+  line-height: 12px;
+  font-weight: 500;
+}
+.menu > p:hover {
+  color: #bac34e;
+}

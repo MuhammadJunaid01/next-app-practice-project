@@ -2,10 +2,11 @@
 .container {
   padding: 10px 17px;
   overflow: hidden;
+  width: 100%;
 }
 .banner_1 {
   height: 300px;
-  width: 90%;
+  width: 100%;
   background-image: url("https://i.ibb.co/82LCZ2M/h1-banner-1.jpg");
   border-radius: 10px;
   -webkit-border-radius: 10px;
@@ -27,7 +28,7 @@
 }
 .banner_2 {
   height: 300px;
-  width: 90%;
+  width: 100%;
   background-image: url("https://i.ibb.co/qkxhBR1/h1-banner-2.jpg");
   border-radius: 10px;
   -webkit-border-radius: 10px;
@@ -42,7 +43,7 @@
 }
 .banner_3 {
   height: 300px;
-  width: 90%;
+  width: 100%;
   background-image: url("https://i.ibb.co/VN10Z9T/h1-banner-3.jpg");
   border-radius: 10px;
   -webkit-border-radius: 10px;

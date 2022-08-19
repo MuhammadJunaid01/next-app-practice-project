@@ -1,11 +1,9 @@
-import React from "react";
-
+import Image from "next/image";
 const SingelFoods = ({ data }) => {
-  console.log("single data", data);
   return (
     <div>
       <h1>hello</h1>
-      <img src={data.img} alt="" />
+      <Image src={data.img} width={200} height={250}></Image>
     </div>
   );
 };

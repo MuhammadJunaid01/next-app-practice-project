@@ -8,7 +8,7 @@ import SyncAltIcon from "@mui/icons-material/SyncAlt";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import KeyboardDoubleArrowRightIcon from "@mui/icons-material/KeyboardDoubleArrowRight";
 import Button from "../button";
-
+import Rating from "react-rating";
 const Foods = ({ data }) => {
   const router = useRouter();
   const handleLink = (id) => {
@@ -16,69 +16,70 @@ const Foods = ({ data }) => {
     // router.push(id);
   };
   return (
-    <div className={FooodsStyle.foods_container}>
-      <div className={FooodsStyle.foods_content}>
-        <Carousel
-          containerStyle={{ padding: "0px 50px" }}
-          dotColorActiv="black"
-          autoplay={5000}
-          cols={5}
-          rows={1}
-          gap={10}
-          loop
-        >
-          {data.map((data, index) => {
-            return (
-              <Carousel.Item key={index}>
-                <div
-                  onClick={() => handleLink(index)}
-                  className={FooodsStyle.foods_item}
-                >
-                  <Link href={`foods/${data.id}`}>
-                    <div>
-                      <img
-                        className={FooodsStyle.img}
-                        src={data.img}
-                        alt="img"
-                      />
-                    </div>
-                  </Link>
+    <div>
+      <div className={FooodsStyle.foods_container}>
+        <div className={FooodsStyle.foods_content}>
+          <Carousel
+            containerStyle={{ padding: "0px 50px" }}
+            dotColorActiv="black"
+            autoplay={5000}
+            cols={5}
+            rows={1}
+            gap={10}
+            loop
+          >
+            {data.map((data, index) => {
+              return (
+                <Carousel.Item key={index}>
+                  <div
+                    onClick={() => handleLink(index)}
+                    className={FooodsStyle.foods_item}
+                  >
+                    <Link href={`foods/${data.id}`}>
+                      <div>
+                        <img
+                          className={FooodsStyle.img}
+                          src={data.img}
+                          alt="img"
+                        />
+                      </div>
+                    </Link>
 
-                  <a href="">
                     <div style={{ padding: "20px" }}>
                       <p className={FooodsStyle.food_item_name}>{data.title}</p>
                     </div>
-                  </a>
+                    <div></div>
 
-                  <div className={FooodsStyle.hover_icon}>
-                    <p>
-                      <RemoveRedEyeIcon />
-                    </p>
-                    <p>
-                      <SyncAltIcon />
-                    </p>
-                    <p>
-                      <FavoriteIcon />
-                    </p>
+                    <div className={FooodsStyle.hover_icon}>
+                      <p>
+                        <RemoveRedEyeIcon />
+                      </p>
+                      <p>
+                        <SyncAltIcon />
+                      </p>
+                      <p>
+                        <FavoriteIcon />
+                      </p>
+                    </div>
+                    <div
+                      style={{
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                      }}
+                    >
+                      <Button
+                        text={"Add To Cart"}
+                        Icon={KeyboardDoubleArrowRightIcon}
+                        sidebar={false}
+                      />
+                    </div>
                   </div>
-                  <div
-                    style={{
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                    }}
-                  >
-                    <Button
-                      text={"Add To Cart"}
-                      Icon={KeyboardDoubleArrowRightIcon}
-                      sidebar={false}
-                    />
-                  </div>
-                </div>
-              </Carousel.Item>
-            );
-          })}
-        </Carousel>
+                </Carousel.Item>
+              );
+            })}
+          </Carousel>
+        </div>
       </div>
     </div>
   );

@@ -2,17 +2,18 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;700&family=Inter:wght@600&family=Kaushan+Script&family=Playfair+Display:ital,wght@1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;700&family=Inter:wght@600&family=Kaushan+Script&family=Playfair+Display:ital,wght@1,700&family=Roboto+Slab:wght@300&display=swap");
 .side_banner_container {
-  overflow: hidden;
-  position: relative;
   border-radius: 5px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
-  width: 88%;
+  width: 90%;
+  overflow: hidden;
+  position: relative;
+  box-sizing: border-box;
 }
 .side_banner {
-  background-image: url("../public/homeLayoutImage.jpg");
+  background-image: url("https://i.ibb.co/R66j4Jy/home-Layout-Image.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   height: 400px;
@@ -32,13 +33,17 @@
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
+  overflow: hidden;
+  box-sizing: border-box;
 }
 .side_banner:hover {
-  transform: scale(1.2);
-  -webkit-transform: scale(1.2);
-  -moz-transform: scale(1.2);
-  -ms-transform: scale(1.2);
-  -o-transform: scale(1.2);
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  overflow: hidden;
+  box-sizing: border-box;
 }
 .side_banner_content_show_up {
   position: relative;
